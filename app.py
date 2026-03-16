@@ -487,9 +487,7 @@ with tab3:
     # Summary table
     st.markdown("### 📋 Model Performance Summary")
     st.dataframe(
-        comp_df.style.background_gradient(subset=['R²'], cmap='RdYlGn')
-                     .background_gradient(subset=['MAPE','MAE','RMSE'], cmap='RdYlGn_r')
-                     .format({'R²': '{:.3f}', 'MAPE': '{:.2f}%',
+        comp_df.style.format({'R²': '{:.3f}', 'MAPE': '{:.2f}%',
                               'MAE': '{:,.0f}', 'RMSE': '{:,.0f}'}),
         use_container_width=True, hide_index=True
     )
